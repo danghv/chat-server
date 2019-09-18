@@ -4,12 +4,12 @@
 // eslint-disable-next-line no-unused-vars
 module.exports = function (options = {}) {
   return async context => {
-    const { app, method, result, params } = context;
-    const messages = method === 'find' ? result.data : [ result ];
-    console.log('message................', messages);
-    await Promise.all(messages.map(async message => {
-      message.user = await app.service('users').get(message.userId, params);
-    }));
+    // const { app, method, result, params } = context;
+    // const messages = method === 'find' ? result.data : [ result ];
+    // console.log('message................', messages);
+    // await Promise.all(messages.map(async message => {
+    //   message.user = await app.service('users').get(message.userId, params);
+    // }));
     return context;
   };
 };
